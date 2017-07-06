@@ -45,7 +45,6 @@ public class MyclassActivity extends BaseFragmentActivity implements ViewPager.O
         tabs.setOnPageChangeListener(this);
 
         findViewById(R.id.title_bar_back).setOnClickListener(this);
-        findViewById(R.id.add).setOnClickListener(this);
     }
 
     @Override

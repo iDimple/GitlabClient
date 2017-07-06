@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wei.mobileoffice">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".OfficeAppContext"
+        android:allowBackup="false"
+        android:icon="@drawable/splash_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme, android:allowBackup">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeMainTab" />
+        <activity android:name=".homework.HomeworkActivity" />
+        <activity android:name=".exercise.ExerciseActivity" />
+        <activity android:name=".myClass.MyclassActivity" />
+        <activity android:name=".myClass.MyclassInfoActivity" />
+        <activity android:name=".myClass.MyclassDetailActivity" />
+        <activity android:name=".exam.ExamActivity" />
+        <activity android:name=".exam.ExamInfoActivity" />
+        <activity android:name=".assignment.TeacherAssignActivity" />
+        <activity android:name=".assignment.TeacherAssignDetailActivity" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".exam.QuestionActivity" />
+        <activity android:name=".exam.CreatorActivity" />
+        <activity android:name=".assignment.ScoreListActivity" />
+        <activity android:name=".assignment.StudentLIstActivity" />
+        <activity android:name=".util.StudentMainActivity" />
+        <activity
+            android:name=".assignment.AnalyseActivity"
+            android:label="@string/title_activity_analyse" />
+        <activity android:name=".assignment.AnaDetailActivity" />
+        <activity android:name=".assignment.ChooseActivity" />
+        <activity android:name=".assignment.ReadMeActivity"></activity>
+    </application>
+
+</manifest>

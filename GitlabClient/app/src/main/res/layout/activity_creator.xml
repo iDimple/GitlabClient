@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c5"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_tab" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/navigationHeader"
+            android:layout_marginBottom="8dp"
+            android:background="#1f000000" />
+
+        <RelativeLayout
+            android:id="@+id/navigationHeader"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/myPrimaryColor"
+            android:paddingTop="24dp">
+
+            <com.wei.mobileoffice.ui.CircleImageView
+                android:id="@+id/head_icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/img_user_head" />
+
+
+            <TextView
+                android:id="@+id/nick_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/head_icon"
+                android:layout_below="@+id/head_icon"
+                android:text="Liu Qin"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_light"
+                android:orientation="vertical">
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/nick_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/nick_icon" />
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/nick_icon"
+                        android:text="姓名" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="刘钦" />
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_gender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/address_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon" />
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/address_icon"
+                        android:text="性别" />
+
+                    <TextView
+                        android:id="@+id/gender"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="男" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_light"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/communication_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/phone_icon" />
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/communication_icon"
+                        android:text="邮箱" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="141250149@smail.nju.edu.cn" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/weixin_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/weixin_icon" />
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/weixin_icon"
+                        android:text="学校" />
+
+                    <TextView
+                        android:id="@+id/school"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="南京大学" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/c4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_tab"/>
+    <include
+        android:id="@+id/loading_page_error"
+        layout="@layout/loading_page_error"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/loading_page_loading"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loading_page_empty"
+        layout="@layout/loading_page_empty"
+        android:visibility="gone"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_light"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_analysis"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/analysis_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/analysis_icon"
+                        android:text="content"/>
+
+                    <TextView
+                        android:id="@+id/analysis"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_readme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="102.33">
+
+
+
+                    <TextView
+                        android:id="@+id/readme"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="测试用的readme"/>/>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

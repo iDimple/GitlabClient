@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@color/c4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/title_bar_tab"/>
+        <include
+            android:id="@+id/loading_page_error"
+            layout="@layout/loading_page_error"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/loading_page_loading"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/loading_page_empty"
+            layout="@layout/loading_page_empty"
+            android:visibility="gone"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_light"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/title_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/staff_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/title_icon"
+                        android:text="名称"/>
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="考试1"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/description_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/nick_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/description_icon"
+                        android:text="描述"/>
+
+                    <TextView
+                        android:id="@+id/description"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="考试1"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_startAt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/startAt_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/department_icon"/>
+
+                    <TextView
+                        android:id="@+id/startAt"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="2017-04-25 16:22:47.0"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_marginLeft="17dip"
+                        android:text="开始时间"
+                        android:layout_alignBaseline="@+id/startAt"
+                        android:layout_alignBottom="@+id/startAt"
+                        android:layout_toEndOf="@+id/startAt_icon" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_endAt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/endAt_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/endAt_icon"
+                        android:text="结束时间"/>
+
+                    <TextView
+                        android:id="@+id/endAt"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="2017-04-25 16:46:47.0"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/questions"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text=""/>
+
+                    <ImageView
+                        android:id="@+id/questions_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/phone_icon"/>
+
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/questions_icon"
+                        android:text="题目列表"/>
+
+                    <ImageView
+                        android:id="@+id/questions_right"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="6dp"
+                        android:src="@drawable/arrow_right"/>
+
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/course_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/weixin_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/course_icon"
+                        android:text="课程"/>
+
+                    <TextView
+                        android:id="@+id/course"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="软工一"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/divider"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/status_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/weixin_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/status_icon"
+                        android:text="状态"/>
+
+                    <TextView
+                        android:id="@+id/status"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="结果分析完毕"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

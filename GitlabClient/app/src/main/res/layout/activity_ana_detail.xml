@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/c4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_tab"/>
+    <include
+        android:id="@+id/loading_page_error"
+        layout="@layout/loading_page_error"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/loading_page_loading"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loading_page_empty"
+        layout="@layout/loading_page_empty"
+        android:visibility="gone"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_light"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/title_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/staff_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/title_icon"
+                        android:text="questionTitle"/>
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="题目1"/>
+
+                </RelativeLayout>
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/navigationHeader"
+                        android:layout_marginBottom="8dp"
+                        android:background="#1f000000" />
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dip"
+                        android:text="scoreResult"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_startAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/startAt_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/department_icon"/>
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_marginLeft="17dip"
+                        android:text="git_url"
+                        android:layout_alignBaseline="@+id/startAt"
+                        android:layout_alignBottom="@+id/startAt"
+                        android:layout_toEndOf="@+id/startAt_icon" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/startAt"
+                    style="@style/text_three_deep_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:text="xxx.git"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_endAt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/endAt_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/endAt_icon"
+                        android:text="score"/>
+
+                    <TextView
+                        android:id="@+id/endAt"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="100"/>/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_scored"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/scored_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/scored_icon"
+                        android:text="scored"/>
+
+                    <TextView
+                        android:id="@+id/scored"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="true"/>/>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_testResult"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/navigationHeader"
+                        android:layout_marginBottom="8dp"
+                        android:background="#1f000000" />
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dip"
+                        android:text="testResult"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_testResultgit_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/testResultgit_url_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/department_icon"/>
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_marginLeft="17dip"
+                        android:text="git_url"
+                        android:layout_alignBaseline="@+id/testResultgit_url"
+                        android:layout_alignBottom="@+id/testResultgit_url"
+                        android:layout_toEndOf="@+id/testResultgit_url_icon" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/testResultgit_url"
+                    style="@style/text_three_deep_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:text="xxx.git"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_compile_succeeded"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/compile_succeeded_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/compile_succeeded_icon"
+                        android:text="compile_succeeded"/>
+
+                    <TextView
+                        android:id="@+id/compile_succeeded"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="true"/>/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_tested"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/tested_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/tested_icon"
+                        android:text="tested"/>
+
+                    <TextView
+                        android:id="@+id/tested"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="true"/>/>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_testcases"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/navigationHeader"
+                        android:layout_marginBottom="8dp"
+                        android:background="#1f000000" />
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dip"
+                        android:text="testcases"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_testcasesname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/testcasesname_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/department_icon"/>
+
+                    <TextView
+                        android:id="@+id/testcasesname"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="test1"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_marginLeft="17dip"
+                        android:text="name"
+                        android:layout_alignBaseline="@+id/testcasesname"
+                        android:layout_alignBottom="@+id/testcasesname"
+                        android:layout_toEndOf="@+id/testcasesname_icon" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_passed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/passed_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/department_icon"/>
+
+                    <TextView
+                        android:id="@+id/passed"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="true"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_marginLeft="17dip"
+                        android:text="passed"
+                        android:layout_alignBaseline="@+id/passed"
+                        android:layout_alignBottom="@+id/passed"
+                        android:layout_toEndOf="@+id/passed_icon" />
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_metricData"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/navigationHeader"
+                        android:layout_marginBottom="8dp"
+                        android:background="#1f000000" />
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dip"
+                        android:text="metricData"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_metricDatagit_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/metricDatagit_url_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/department_icon"/>
+
+
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_marginLeft="17dip"
+                        android:text="git_url"
+                        android:layout_alignBaseline="@+id/metricDatagit_url"
+                        android:layout_alignBottom="@+id/metricDatagit_url"
+                        android:layout_toEndOf="@+id/metricDatagit_url_icon" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/metricDatagit_url"
+                    style="@style/text_three_deep_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:text="xxx.git"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_measured"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/measured_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/measured_icon"
+                        android:text="measured"/>
+
+                    <TextView
+                        android:id="@+id/measured"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="true"/>/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_total_line_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/total_line_count_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/total_line_count_icon"
+                        android:text="total_line_count"/>
+
+                    <TextView
+                        android:id="@+id/total_line_count"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="158"/>/>
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_comment_line_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/comment_line_count_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/comment_line_count_icon"
+                        android:text="comment_line_count"/>
+
+                    <TextView
+                        android:id="@+id/comment_line_count"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="35"/>/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_field_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/field_count_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/field_count_icon"
+                        android:text="field_count"/>
+
+                    <TextView
+                        android:id="@+id/field_count"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="5"/>/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_method_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/method_count_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/method_count_icon"
+                        android:text="method_count"/>
+
+                    <TextView
+                        android:id="@+id/method_count"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="5"/>/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_max_coc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/max_coc_icon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/address_icon"/>
+
+                    <TextView
+                        style="@style/text_three_c2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dip"
+                        android:layout_toRightOf="@id/max_coc_icon"
+                        android:text="max_coc"/>
+
+                    <TextView
+                        android:id="@+id/max_coc"
+                        style="@style/text_three_deep_grey"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="2"/>/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
